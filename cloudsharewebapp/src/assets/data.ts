@@ -1,38 +1,47 @@
+import {
+  ArrowUpCircle,
+  Clock,
+  CreditCard,
+  FileText,
+  Share2,
+  Shield,
+} from "lucide-react";
+
 export const features = [
   {
-    iconName: "ArrowUpCircle",
+    iconName: ArrowUpCircle,
     iconColor: "text-purple-600",
     title: "Easy File Upload",
     description:
       "Quick upload your files with our intuitive drag-and-drop interface.",
   },
   {
-    iconName: "Shield",
+    iconName: Shield,
     iconColor: "text-green-600",
     title: "Secure Storage",
     description:
       "Your files are encrypted and stored securely on our cloud infrastructure.",
   },
   {
-    iconName: "Share2",
+    iconName: Share2,
     iconColor: "text-purple-600",
     title: "Simple Sharing",
     description: "Share files with ease using our user-friendly interface.",
   },
   {
-    iconName: "CreditCard",
+    iconName: CreditCard,
     iconColor: "text-orange-600",
     title: "Flexible Credits",
     description: "Pay only for what you use with our credit based systems.",
   },
   {
-    iconName: "FileText",
+    iconName: FileText,
     iconColor: "text-red-600",
     title: "File Management",
     description: "Organize, preview, and manage your files with ease.",
   },
   {
-    iconName: "Clock",
+    iconName: Clock,
     iconColor: "text-indigo-600",
     title: "Transaction History",
     description: "Keep tracks of all your credits purchases and usage.",
@@ -82,5 +91,35 @@ export const PricingPlans = [
     ],
     cta: "Go Ultimate",
     highlighted: true,
+  },
+];
+
+export const testimonials = [
+  {
+    name: "Michael Chen",
+    role: "Freelancer Designer",
+    company: "Self-Employed",
+    image: "https://randomuser.me/api/portraits/men/1.jpg",
+    quote:
+      "CloudShare has been a game-changer for my design projects. The file sharing feature has been a lifesaver, allowing me to collaborate with my clients from anywhere in the world.",
+    rating: 5,
+  },
+  {
+    name: "Priya Sharma",
+    role: "Project Manager",
+    company: "Self-Employed",
+    image: "https://randomuser.me/api/portraits/women/69.jpg",
+    quote:
+      "Managing Project files across multiple teams used to be a nightmare. CloudShare has made it a breeze.",
+    rating: 4,
+  },
+  {
+    name: "Michael Chen",
+    role: "Freelancer Designer",
+    company: "Self-Employed",
+    image: "https://randomuser.me/api/portraits/men/7.jpg",
+    quote:
+      "CloudShare has been a game-changer for my design projects. The file sharing feature has been a lifesaver, allowing me to collaborate with my clients from anywhere in the world.",
+    rating: 4,
   },
 ];

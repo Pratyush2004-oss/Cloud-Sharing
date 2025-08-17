@@ -3,6 +3,7 @@ import FeatureSection from "../components/Landing/FeatureSection";
 import FooterSection from "../components/Landing/FooterSection";
 import HeroSection from "../components/Landing/HeroSection";
 import PricingSection from "../components/Landing/PricingSection";
+import Testimonials from "../components/Landing/Testimonials";
 
 const Landing = () => {
   return (
@@ -15,6 +16,9 @@ const Landing = () => {
 
       {/* Pricing section */}
       <PricingSection />
+
+      {/* testimonials */}
+      <Testimonials />
 
       {/* CTA section */}
       <CTASecction />
