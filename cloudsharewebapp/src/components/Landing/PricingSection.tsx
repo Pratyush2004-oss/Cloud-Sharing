@@ -1,6 +1,11 @@
+import { useClerk, useUser } from "@clerk/clerk-react";
 import { PricingPlans } from "../../assets/data";
 import { Check } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 const PricingSection = () => {
+  const { openSignIn } = useClerk();
+  const { user } = useUser();
+  const navigate = useNavigate();
   return (
     <div className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -41,7 +46,9 @@ const PricingSection = () => {
                   )}
                 </div>
                 <p className="mt-4 text-sm text-gray-500">{plan.description}</p>
-                <p className="mt-4 text-4xl font-extrabold text-gray-900 ">₹{plan.price}</p>
+                <p className="mt-4 text-4xl font-extrabold text-gray-900 ">
+                  ₹{plan.price}
+                </p>
               </div>
               <div className="flex-1 flex flex-col justify-between px-6 pt-6 pb-8 bg-gray-50 space-y-6">
                 <ul className="space-y-4">
@@ -56,6 +63,9 @@ const PricingSection = () => {
                 </ul>
                 <div className="rounded-md shadow-sm">
                   <button
+                    onClick={() =>
+                      user ? navigate("/subscriptions") : openSignIn()
+                    }
                     className={`w-full flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md ${
                       plan.highlighted
                         ? "text-white bg-purple-500 hover:bg-purple-600"
